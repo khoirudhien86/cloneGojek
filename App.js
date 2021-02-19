@@ -8,7 +8,7 @@ export default class App extends Component {
         {/* ini konten */}
         <View style={styles.content}>
           {/* ini seacrh bar & promo bar */}
-          <View style={{flexDirection: 'row', paddingHorizontal: 20, paddingTop: 15}}>
+          <View style={{flexDirection: 'row', paddingHorizontal: 16, paddingTop: 15}}>
             <View style={{position: 'relative', flex: 1}}>
               <TextInput placeholder="ketikkan sesuatu disini" style={{borderWidth: 1,borderColor: 'black', backgroundColor: 'white', borderRadius: 25, paddingLeft: 40, paddingRight: 30, height: 43}}/>
               <Image style={{position: 'absolute', top:9, left:8}} source={require('./assets/search.png')} /> 
@@ -19,11 +19,11 @@ export default class App extends Component {
           </View>
           {/* main gopay bar */}
           <View>
-            <View style={{height: 40, flexDirection: 'row', justifyContent: 'space-between',marginHorizontal: 20, backgroundColor: 'blue', paddingHorizontal: 5, marginTop: 10, borderTopLeftRadius: 3, borderTopRightRadius: 3, alignItems: 'center'}}>
+            <View style={{height: 40, flexDirection: 'row', justifyContent: 'space-between',marginHorizontal: 16, backgroundColor: 'blue', paddingHorizontal: 5, marginTop: 10, borderTopLeftRadius: 3, borderTopRightRadius: 3, alignItems: 'center'}}>
               <Image source={require('./assets/gopay.png')} />
               <Text style={{fontSize: 16, fontWeight: 'bold', color: 'white'}}>Rp 50.000</Text>
             </View>
-            <View style={{height: 80, backgroundColor: 'skyblue', marginHorizontal: 20, borderBottomLeftRadius: 3, borderBottomRightRadius: 3, flexDirection: 'row'}}>
+            <View style={{height: 80, backgroundColor: 'skyblue', marginHorizontal: 16, borderBottomLeftRadius: 3, borderBottomRightRadius: 3, flexDirection: 'row'}}>
               <View style={{flex: 1, alignItems: 'center', justifyContent: 'center', paddingTop: 12}}>
                 <Image  style={{height: 35, width: 35}} source={require('./assets/pay.png')} />
                 <Text style={{color: 'white', fontWeight: 'bold', fontSize: 14, marginTop: 2}}>Pay</Text>
@@ -40,6 +40,73 @@ export default class App extends Component {
                 <Image  style={{height: 35, width: 35}} source={require('./assets/more.png')} />
                 <Text style={{color: 'white', fontWeight: 'bold', fontSize: 14, marginTop: 2}}>More</Text>
               </View>
+            </View>
+          </View>
+          {/* main konten */}
+          <View style={{marginTop: 15, paddingHorizontal: 5}}>
+
+            <View style={{flexDirection: 'row', justifyContent: 'space-between', width: '100%', flexWrap: 'wrap'}}>
+
+              <View style={{width: `${100/4}%`, alignItems: 'center'}}>
+                <View style={{width: 55, height: 55, borderWidth: 1, borderColor: 'black', borderRadius: 17, justifyContent: 'center', alignItems: 'center'}}>
+                  <Image source={require('./assets/go-ride.png')} />
+                </View>
+                <Text style={{fontWeight: 'bold', fontSize: 11, marginTop: 5, textAlign: 'center'}}>GO-RIDE</Text>
+              </View>
+
+              <View style={{width: `${100/4}%`, alignItems: 'center'}}>
+                <View style={{width: 55, height: 55, borderWidth: 1, borderColor: 'black', borderRadius: 17, justifyContent: 'center', alignItems: 'center'}}>
+                  <Image source={require('./assets/go-car.png')} />
+                </View>
+                <Text style={{fontWeight: 'bold', fontSize: 11, marginTop: 5, textAlign: 'center'}}>GO-CAR</Text>
+              </View>
+
+              <View style={{width: `${100/4}%`, alignItems: 'center'}}>
+                <View style={{width: 55, height: 55, borderWidth: 1, borderColor: 'black', borderRadius: 17, justifyContent: 'center', alignItems: 'center'}}>
+                  <Image source={require('./assets/go-bluebird.png')} />
+                </View>
+                <Text style={{fontWeight: 'bold', fontSize: 11, marginTop: 5, textAlign: 'center'}}>GO-BLUEBIRD</Text>
+              </View>
+              
+              <View style={{width: `${100/4}%`, alignItems: 'center'}}>
+                <View style={{width: 55, height: 55, borderWidth: 1, borderColor: 'black', borderRadius: 17, justifyContent: 'center', alignItems: 'center'}}>
+                  <Image source={require('./assets/go-food.png')} />
+                </View>
+                <Text style={{fontWeight: 'bold', fontSize: 11, marginTop: 5, textAlign: 'center'}}>GO-FOOD</Text>
+              </View>
+              
+            </View>
+
+            <View style={{flexDirection: 'row', justifyContent: 'space-between', marginTop: 15, width: '100%', flexWrap: 'wrap'}}>
+
+              <View style={{width: `${100/4}%`, alignItems: 'center'}}>
+                <View style={{width: 55, height: 55, borderWidth: 1, borderColor: 'black', borderRadius: 17, justifyContent: 'center', alignItems: 'center'}}>
+                  <Image source={require('./assets/go-send.png')} />
+                </View>
+                <Text style={{fontWeight: 'bold', fontSize: 11, marginTop: 5, textAlign: 'center'}}>GO-SEND</Text>
+              </View>
+              
+              <View style={{width: `${100/4}%`, alignItems: 'center'}}>
+                <View style={{width: 55, height: 55, borderWidth: 1, borderColor: 'black', borderRadius: 17, justifyContent: 'center', alignItems: 'center'}}>
+                  <Image source={require('./assets/go-deals.png')} />
+                </View>
+                <Text style={{fontWeight: 'bold', fontSize: 11, marginTop: 5, textAlign: 'center'}}>GO-DEALS</Text>
+              </View>
+              
+              <View style={{width: `${100/4}%`, alignItems: 'center'}}>
+                <View style={{width: 55, height: 55, borderWidth: 1, borderColor: 'black', borderRadius: 17, justifyContent: 'center', alignItems: 'center'}}>
+                  <Image source={require('./assets/go-pulsa.png')} />
+                </View>
+                <Text style={{fontWeight: 'bold', fontSize: 11, marginTop: 5, textAlign: 'center'}}>GO-PULSA</Text>
+              </View>
+
+              <View style={{width: `${100/4}%`, alignItems: 'center'}}>
+                <View style={{width: 55, height: 55, borderWidth: 1, borderColor: 'black', borderRadius: 17, justifyContent: 'center', alignItems: 'center'}}>
+                  <Image source={require('./assets/go-more.png')} />
+                </View>
+                <Text style={{fontWeight: 'bold', fontSize: 11, marginTop: 5, textAlign: 'center'}}>MORE</Text>
+              </View>
+
             </View>
           </View>
         </View>
