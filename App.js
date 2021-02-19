@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
-import { View, Text, Image, ScrollView, TextInput, StyleSheet} from 'react-native';
+import { View, Text, Image, ScrollView, TextInput, StyleSheet, TouchableOpacity} from 'react-native';
 
 export default class App extends Component {
   render(){
     return (
       <View style={styles.container}>
         {/* ini konten */}
-        <View style={styles.content}>
+        <ScrollView style={styles.content}>
+
           {/* ini seacrh bar & promo bar */}
           <View style={{flexDirection: 'row', paddingHorizontal: 16, paddingTop: 15}}>
             <View style={{position: 'relative', flex: 1}}>
@@ -17,6 +18,7 @@ export default class App extends Component {
               <Image style={{ marginLeft:15, height: 31}} source={require('./assets/promo.png')} />
             </View>
           </View>
+
           {/* main gopay bar */}
           <View>
             <View style={{height: 40, flexDirection: 'row', justifyContent: 'space-between',marginHorizontal: 16, backgroundColor: 'blue', paddingHorizontal: 5, marginTop: 10, borderTopLeftRadius: 3, borderTopRightRadius: 3, alignItems: 'center'}}>
@@ -42,6 +44,7 @@ export default class App extends Component {
               </View>
             </View>
           </View>
+
           {/* main konten */}
           <View style={{marginTop: 15, paddingHorizontal: 5}}>
 
@@ -109,7 +112,33 @@ export default class App extends Component {
 
             </View>
           </View>
-        </View>
+          <View style={{height: 17, backgroundColor: 'grey', marginTop: 15}}></View>
+
+          {/* go news section */}
+          <View style={{paddingTop: 15, paddingHorizontal: 16, paddingBottom: 20}}>
+            {/* poster */}
+            <View style={{position: 'relative'}}>
+              <Image source={require('./assets/sepak-bola.jpg')} style={{height: 170, width: '100%', borderRadius: 6}} />
+              <View style={{width: '100%', height: '100%', position: 'absolute', backgroundColor: 'black', opacity: 0.2, borderRadius: 6}}></View>
+              {/* agar logo tidak terpotong */}
+              <View style={{width: 55, height: 16, position: 'absolute', top: 16, left: 16 }}>
+                <Image source={require('./assets/white.png')} style={{width: undefined, height: undefined, resizeMode: 'contain', flex: 1}} />
+              </View>
+            </View>
+            {/* text */}
+            <View style={{borderBottomColor: 'grey', borderBottomWidth: 1}}>
+              <Text style={{fontSize: 16, fontWeight: 'bold', marginTop: 10}}>GO-NEWS</Text>
+              <Text style={{fontSize: 14}}>Dimas Drajat selamatkan penalti, Timnas kalahkan Brunei</Text>
+              {/* button */}
+              <TouchableOpacity style={{backgroundColor: 'green', marginTop: 5, alignSelf: 'flex-end', paddingHorizontal: 12, paddingVertical: 11, borderRadius: 6, marginBottom: 15}}>
+                <Text style={{fontSize: 16, fontWeight: 'bold', color: 'white', textAlign: 'center'}}>READ</Text>
+              </TouchableOpacity>
+            </View>
+
+          </View>
+
+        </ScrollView>
+
         {/* ini bottom bar */}
         <View style={styles.bottomBar}>
           <View style={{flex: 1, alignItems: 'center', justifyContent: 'center', }}>
@@ -133,6 +162,7 @@ export default class App extends Component {
             <Text>Account</Text>
           </View>
         </View>
+        
       </View>
     );
   };
