@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import { View, Text, Image, ScrollView, TextInput, StyleSheet, TouchableOpacity} from 'react-native';
-
 export default class App extends Component {
   render(){
     return (
@@ -115,7 +114,7 @@ export default class App extends Component {
           <View style={{height: 17, backgroundColor: 'grey', marginTop: 15}}></View>
 
           {/* go news section */}
-          <View style={{paddingTop: 15, paddingHorizontal: 16, paddingBottom: 20}}>
+          <View style={{paddingTop: 15, paddingHorizontal: 16}}>
             {/* poster */}
             <View style={{position: 'relative'}}>
               <Image source={require('./assets/sepak-bola.jpg')} style={{height: 170, width: '100%', borderRadius: 6}} />
@@ -137,6 +136,31 @@ export default class App extends Component {
 
           </View>
 
+          {/* banner go-food section */}
+          <View style={{padding: 16}}>
+            {/* banner & logo */}
+            <View style={{position: 'relative', width: '100%'}}>
+              <Image source={require('./assets/food-banner.jpg')} style={{height: 170, width: '100%', borderRadius: 6}} />
+              <View style={{width: '100%', height: '100%', position: 'absolute', backgroundColor: 'black', opacity: 0.15, borderRadius: 6}}></View>
+              <View style={{width: 55, height: 16, position: 'absolute', top: 16, left: 16 }}>
+                <Image source={require('./assets/white.png')} style={{width: undefined, height: undefined, resizeMode: 'contain', flex: 1}} />
+              </View>
+              {/* text & button */}
+              <View style={{position: 'absolute', left: 0, bottom: 0, flexDirection: 'row', width: '100%', paddingHorizontal: 16, paddingBottom: 10}}>
+                <View style={{flex: 1}}>
+                  <Text style={{fontSize: 16, fontWeight: 'bold', color: 'white', marginBottom: 8}}>GO-FOOD BANNER</Text>
+                  <Text style={{color: 'white'}}>ini adalah contoh food banner internal</Text>
+                </View>
+                <View>
+                  <TouchableOpacity style={{backgroundColor: 'green', marginTop: 15, alignSelf: 'stretch', paddingHorizontal: 12, paddingVertical: 11, borderRadius: 6}}>
+                  <Text style={{fontSize: 12, fontWeight: 'bold', color: 'white', textAlign: 'center'}}>GET VOUCHER</Text>
+                  </TouchableOpacity>
+                </View>
+              </View>
+            </View>
+            <View style={{borderWidth: 1, borderColor: 'grey', marginTop: 16}}></View>
+          </View>
+          
         </ScrollView>
 
         {/* ini bottom bar */}
