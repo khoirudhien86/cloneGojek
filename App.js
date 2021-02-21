@@ -162,7 +162,7 @@ export default class App extends Component {
           </View>
           
           {/* internal information section */}
-          <View style={{padding: 16}}>
+          <View style={{padding: 16, paddingBottom: 0}}>
             <View style={{width: 55, height: 16, marginBottom: 10}}>
               <Image source={require('./assets/gojek.png')} style={{width: undefined, height: undefined, resizeMode: 'contain', flex: 1}} />
             </View>
@@ -180,6 +180,45 @@ export default class App extends Component {
             <TouchableOpacity style={{backgroundColor: 'green', marginTop: 5, alignSelf: 'flex-end', paddingHorizontal: 12, paddingVertical: 11, borderRadius: 6, marginBottom: 15}}>
               <Text style={{fontSize: 12, fontWeight: 'bold', color: 'white', textAlign: 'center'}}>CONNECT</Text>
             </TouchableOpacity>
+            <View style={{borderWidth: 1, borderColor: 'grey'}}></View>
+          </View>
+
+          {/* Nearby Go-food */}
+          <View style={{padding: 16}}>
+            <View style={{width: 55, height: 16, marginBottom: 10}}>
+              <Image source={require('./assets/go-food-logo.png')} style={{width: undefined, height: undefined, resizeMode: 'contain', flex: 1}} />
+            </View>
+            <View style={{flexDirection: 'row', justifyContent: 'space-between', marginBottom: 8}}>
+              <Text style={{fontSize: 15, fontWeight: 'bold'}}>Nearby Restaurant</Text>
+              <Text style={{fontSize: 15, fontWeight: 'bold', color: 'green'}}>See All</Text>
+            </View>
+
+            <ScrollView horizontal style={{flexDirection: 'row', marginBottom: 20}}>
+              <View style={{width: 150, height: 150, marginRight: 10}}>
+                <Image source={require('./assets/go-food-kfc.jpg')} style={{width: undefined, height: undefined, resizeMode: 'cover', flex: 1, borderRadius: 8, marginBottom: 10}} />
+                <Text>KFC MALL</Text>
+              </View>
+
+              <View style={{width: 150, height: 150, marginRight: 10}}>
+                <Image source={require('./assets/go-food-banka.jpg')} style={{width: undefined, height: undefined, resizeMode: 'cover', flex: 1, borderRadius: 8, marginBottom: 10}} />
+                <Text>contoh 1</Text>
+              </View>
+
+              <View style={{width: 150, height: 150, marginRight: 10}}>
+                <Image source={require('./assets/go-food-gm.jpg')} style={{width: undefined, height: undefined, resizeMode: 'cover', flex: 1, borderRadius: 8, marginBottom: 10}} />
+                <Text>contoh 2</Text>
+              </View>
+
+              <View style={{width: 150, height: 150, marginRight: 10}}>
+                <Image source={require('./assets/go-food-orins.jpg')} style={{width: undefined, height: undefined, resizeMode: 'cover', flex: 1, borderRadius: 8, marginBottom: 10}} />
+                <Text>contoh 3</Text>
+              </View>
+
+              <View style={{width: 150, height: 150}}>
+                <Image source={require('./assets/go-food-pak-boss.jpg')} style={{width: undefined, height: undefined, resizeMode: 'cover', flex: 1, borderRadius: 8, marginBottom: 10}} />
+                <Text>contoh 4</Text>
+              </View>
+            </ScrollView>
             <View style={{borderWidth: 1, borderColor: 'grey'}}></View>
           </View>
 
