@@ -137,7 +137,7 @@ export default class App extends Component {
           </View>
 
           {/* banner go-food section */}
-          <View style={{padding: 16}}>
+          <View style={{padding: 16, paddingBottom: 0}}>
             {/* banner & logo */}
             <View style={{position: 'relative', width: '100%'}}>
               <Image source={require('./assets/food-banner.jpg')} style={{height: 170, width: '100%', borderRadius: 6}} />
@@ -161,6 +161,28 @@ export default class App extends Component {
             <View style={{borderWidth: 1, borderColor: 'grey', marginTop: 16}}></View>
           </View>
           
+          {/* internal information section */}
+          <View style={{padding: 16}}>
+            <View style={{width: 55, height: 16, marginBottom: 10}}>
+              <Image source={require('./assets/gojek.png')} style={{width: undefined, height: undefined, resizeMode: 'contain', flex: 1}} />
+            </View>
+            <Text style={{fontSize: 16, fontWeight: 'bold', marginBottom: 8}}>Complete Your Profile</Text>
+            <View style={{flexDirection: 'row'}}>
+              <View style={{justifyContent: 'center', alignItems: 'center'}}>
+               <Image source={require('./assets/facebook-connect.png')} />
+              </View>
+              <View style={{marginLeft: 10, width: '60%'}}>
+                <Text style={{fontWeight: 'bold', fontSize: 14, marginBottom: 8}}>Connect to Your Facebook</Text>
+                <Text>ini teks internal information section.</Text>
+              </View>
+            </View>
+            {/* button */}
+            <TouchableOpacity style={{backgroundColor: 'green', marginTop: 5, alignSelf: 'flex-end', paddingHorizontal: 12, paddingVertical: 11, borderRadius: 6, marginBottom: 15}}>
+              <Text style={{fontSize: 12, fontWeight: 'bold', color: 'white', textAlign: 'center'}}>CONNECT</Text>
+            </TouchableOpacity>
+            <View style={{borderWidth: 1, borderColor: 'grey'}}></View>
+          </View>
+
         </ScrollView>
 
         {/* ini bottom bar */}
