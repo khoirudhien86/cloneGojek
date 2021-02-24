@@ -1,11 +1,13 @@
 import React from 'react';
-import { View, Image, Text} from 'react-native';
+import { View, Image, Text, TouchableOpacity} from 'react-native';
 
-const GopaySection = (props) => {
+const GopaySection = ({img, nama, onPress}) => {
     return(
         <View style={{flex: 1, alignItems: 'center', justifyContent: 'center', paddingTop: 12}}>
-            <Image  style={{height: 35, width: 35}} source={props.img} />
-            <Text style={{color: 'white', fontWeight: 'bold', fontSize: 14, marginTop: 2}}>{props.nama}</Text>
+            <TouchableOpacity onPress={onPress}>
+                <Image style={{height: 35, width: 35}} source={img} />
+            </TouchableOpacity>
+            <Text style={{color: 'white', fontWeight: 'bold', fontSize: 14, marginTop: 2}}>{nama}</Text>
         </View>
     );
 }

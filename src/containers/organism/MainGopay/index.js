@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { View, Image, Text} from 'react-native';
+import { View, Image, Text, TouchableOpacity} from 'react-native';
 import GopaySection from '../../../components/molecul/GopaySection';
+
 
 class MainGopay extends Component {
     render() {
@@ -11,8 +12,8 @@ class MainGopay extends Component {
               <Text style={{fontSize: 16, fontWeight: 'bold', color: 'white'}}>Rp 50.000</Text>
             </View>
             <View style={{height: 80, backgroundColor: 'skyblue', marginHorizontal: 16, borderBottomLeftRadius: 3, borderBottomRightRadius: 3, flexDirection: 'row'}}>
-              <GopaySection nama="Pay" img={require('../../../../assets/pay.png')} />
-              <GopaySection nama="Naerby" img={require('../../../../assets/nearby.png')} />
+              <GopaySection nama="Pay" img={require('../../../../assets/pay.png')} onPress={this.props.onPress} />
+              <GopaySection nama="Naerby" img={require('../../../../assets/nearby.png')} onPress={this.props.onPress} />
               <GopaySection nama="Top Up" img={require('../../../../assets/topup.png')} />
               <GopaySection nama="More" img={require('../../../../assets/more.png')} />
             </View>
